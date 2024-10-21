@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Language set</title>
+        <title>QuadLegacy</title>
         <style>
             body {
-                background-image: url("img/wallpapers/windows7_1536_960.jpg");
+                background-image: url("../img/wallpapers/windows7_1536_960.jpg");
                 color: black; /* Цвет текста */
                 font-family: Arial, sans-serif;
                 margin: 0;
@@ -158,90 +158,52 @@
             cmd {
                 color: #660000;
             }
-            .win7-button {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 14px;
-            color: #333;
-            padding: 10px 20px;
-            background: linear-gradient(to bottom, #d4e8fe 0%, #b0d7fb 100%); /* Синеватый градиент */
-            border: 1px solid #6ca0dc;
-            border-radius: 5px;
-            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .win7-button:active {
-            background: linear-gradient(to bottom, #b0d7fb 0%, #d4e8fe 100%); /* Инвертируем градиент при нажатии */
-            box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
-        }
-
-        .win7-button:hover {
-            background: linear-gradient(to bottom, #c5e2fd 0%, #9bc9f8 100%); /* Более тёмный синий при наведении */
-            border-color: #5b8dc9;
-        }
+            
         </style>
-        
     </head>
     <body>
         <div class="header">
-            <h1>QLegacy Web Site</h1>
+            <h1><a href="https://qlegacy.github.io/site/">QLegacy Web Site</a></h1>
         </div>
         <div class="container">
             <div class="info-box info-left">
                 <div class="taskbar">
                     
                 </div>
-                <h1><img src="img/emojies/flag-united-kingdom_1f1ec-1f1e7.png" alt="ios_england" height="20%">:Choose site language, using right button 
-                <br><img src="img/emojies/flag-russia_1f1f7-1f1fa.png" alt="ios_russian" height="20%">:Выберите язык сайта кнопками справа</h1>
-                    
+                <h1>QuadLegacy Web Site</h1>
+                <p style="font-size: 125%;">Статья: "Как публиковать фото в комментарии тиктока?"<img src="../img/emojies/heavy-black-heart_2764.png" alt="IOS_10_3_red_heart" height="8%"> )</p>
+                <p>читайте справа</p>    
             </div>
             <div class="info-box info-right">
                 <div class="taskbar">
-                    <span>langs.html</span>
+                    <span>healthly info</span>
                     <div class="buttons">
                         <div class="button close"></div>
                         <div class="button minimize"></div>
                         <div class="button maximize"></div>
                     </div>
                 </div>
-                <h1>Languages [==] Языки</h1>
-                <button onclick="setLanguage('ru')" class="win7-button">Русский</button>
-                <button onclick="setLanguage('en')" class="win7-button">English</button>
+                <h1>Гайд: Публикация фотографий в комментарии тиктока</h1>
+                <p>всем привет, я думаю что не секрет что вы все видели как кто-то публикует фотографии в тикток, там и до 18+ было... вообщем, вы и сами хотите такую кнопочку:</p>
+                <br>
+                <img src="../img/pics/photo_comment_pi.png" alt="" style="margin-left: 2%;" height="30%" width="35%">
+                <br>
+                <p>кнопка отсылания картинки через комментарии в тикток</p>
+                <h2>Так что надо сделать?</h2>
+                <h3>способ 1 (проверенный мной): </h3>
+                <img src="../img/pics/1stage.jpg" alt="">
+                <br>
+                <img src="../img/pics/2stage.jpg" alt="">
+                <br>
+                <img src="../img/pics/3stage.jpg" alt="">
+                <br>
+                <img src="../img/pics/4stage.jpg" alt="">
+                <br>
+                <br>
+                <p>создаёте новый аккаунт и теперь вы можете владеть фотками, идите кидайте трольфейсов :laugh:</p>
+                <h2>2 Способ. Который не работает у меня</h2>
+                <p>Этот способ не требует нового аккаунта, что надо: это в настройках найти пункт "регион" и пробыть в египте 30 дней (месяц) что можно сделать через впн но я не могу это сделать так как у меня на это нету времени. У кого получиться, отпишите кое-куда =)</p>
             </div>
-            <script>
-                // Функция для получения значения cookie по имени
-        function getCookie(name) {
-            let value = "; " + document.cookie;
-            let parts = value.split("; " + name + "=");
-            if (parts.length === 2) return parts.pop().split(";").shift();
-        }
-
-        // Функция для установки куки
-        function setLanguage(lang) {
-            // Устанавливаем куки на 30 дней
-            document.cookie = "language=" + lang + "; path=/; max-age=" + (30 * 24 * 60 * 60);
-            
-            // Перенаправляем на соответствующую страницу
-            if (lang === 'ru') {
-                window.location.href = 'index_ru.html';
-            } else if (lang === 'en') {
-                window.location.href = 'index_en.html';
-            }
-        }
-
-        // Проверка на наличие куки при загрузке страницы
-        window.onload = function() {
-            let language = getCookie('language'); // Получаем значение cookie "language"
-            
-            // Если куки найдены, перенаправляем на нужную страницу
-            if (language === 'ru') {
-                window.location.href = 'index_ru.html';
-            } else if (language === 'en') {
-                window.location.href = 'index_en.html';
-            }
-        };
-            </script>
         </div>
         <div class="taskbar-bottom">
             <button class="start-button"></button>
